@@ -22,6 +22,7 @@ function bot_works (){
     var tpc_works = document.querySelectorAll('#tpc_works')
 
     // add autos reads and views
+
     if(tpcs_link < Urls.length){
         iframe.src = Urls[tpcs_link]
         tpc_works.item(tpcs_link).innerHTML = 'Tarefas concluída'
@@ -80,10 +81,12 @@ function manual_works (el){
     const url = el.classList[0]
     const default_saldo = 5
     const gncoin = 0.005
-    const iframe = document.getElementById('inpuIframe')
+    var iframe = document.createElement('a')
+    window.location.href = url
+    
     var saldo_view = document.getElementById('saldo_views')
     var tpc_views = document.getElementById('tpc_views')
-    iframe.src = url
+    //iframe.src = url
     el.innerHTML = 'Tarefa em execução'
     setTimeout(()=>{ 
         el.setAttribute('disabled', 'true')
@@ -109,7 +112,7 @@ function manual_works (el){
             localStorage.setItem('myBalanceAOA', myBalanceAOA = myBalanceAOA + default_saldo)
         }
         
-    }, 1000)
+    }, 11000)
 }
 
 Urls.map((ls)=>( list_of_tpc(ls) ))
