@@ -1,0 +1,116 @@
+body{
+    padding: 0;
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*{
+    text-decoration: none;
+}
+/*
+* Root formats
+*/
+.root-header{
+    width: 100%;
+    height: max-content;
+    position: fixed;
+    top: 0;
+    background-color: rgb(0, 110, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.root-header nav{
+    width: 90%;
+    height: max-content;
+}
+.app-bar-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.app-bar-top h1{ color: #fff; }
+.app-bar-top a{ color: #fff; }
+
+.top-detalhes{
+    margin-top: 10px;
+}
+.top-detalhes span{ color:#fff; font-size: 11pt; }
+.top-detalhes h1{
+    margin: 0;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+
+.nav-bar-bottom{
+    width: 100%;
+    position: fixed;
+    height: 70px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.185);
+    border-radius: 10px 10px 0  0;
+}
+.nav-bar-bottom a{
+    margin: 10px;
+
+}
+
+.wallet-ele{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 180px;
+}
+.wallet-ele article{
+    width: 87%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.301);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.wallet-ele a{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: gray;
+}
+.wallet-ele a i{ 
+    color: rgb(0, 110, 255); 
+    font-size: 17pt;
+    margin-bottom: 15px;
+}
+.wallet-ele a span{ font-size: 10pt;}
+
+.app-content{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.pub-bainner{
+    width: 100%;
+    height: 70px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.pub-bainner div{
+    width: 90%;
+    height: 70px;
+    border-radius: 5px;
+    background-color: rgba(0, 110, 255, 0.26);
+}
+.app-content h1{
+    width: 90%;
+    margin: 25px;
+    font-size: 13pt;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaser Tarefas</title>
+    <link rel="stylesheet" href="../asset/icons/bootstrap-icons-1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../asset/css/tarefa.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="bi-arrow-left"></a>
+            <h1>Tarefas</h1>
+        </nav>
+    </header>
+
+    <section class="tarefa-exe">
+        <div>
+            <small>Saldo diário</small>
+            <h1 id="saldo_views">AOA 0,00</h1>
+            <span id="tpc_count">Tarefas total: 0</span> <br>
+            <span id="tpc_views">Tarefas conluídas: 0</span>
+        </div>
+    </section>
+    <section class="bainner">
+        <p>
+            Meus obojetivos diários. <br>
+            O Gaser tem mais de 3.000 tarefas disponível para ti!
+            Como ei de executar as minhas tarefas?
+            Existe mais de 3.000 tarefas no Gaser, para ser executado todos os dias,
+            executando manualmente seria muito trabalhosos para ti, o Gaser disponibizou
+            um mecanismo de execução Automáticas para ti, usando rôbo. 
+        </p>
+
+        <button onclick="start_bot(this)">Inciar o rôbo</button>
+    </section>
+    <section class="tarefas-list"></section>
+    <section class="iframe-views">
+        <iframe src="" frameborder="0" name="myIframe" id="inpuIframe"></iframe>
+    </section>
+
+
+    <script src="../asset/js/myUrls.js"></script>
+    <script src="../asset/js/bot.works.js"></script>
+</body>
+</html>

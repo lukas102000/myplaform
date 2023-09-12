@@ -4,22 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaser plataform</title>
+    <title>Gaser plataforms</title>
+
+    <link rel="stylesheet" href="./asset/icons/bootstrap-icons-1.10.5/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="./asset/css/home.css">
 </head>
 <body>
     
+    <!--- Headers -->
+    <header class="root-header">
+        <nav class="app-bar-top">
+            <div> <h1>Gaser</h1> </div>
+            <div>
+                <a href="#" class="bi-person"></a>
+                <a href="#" class="profil">  </a>
+            </div>
+        </nav>
+        <nav class="top-detalhes">
+            <span>Saldo disponível</span>
+            <h1 id="gncoin">0,00 GNCoin</h1>
+            <span id="saldo">AOA 0,00</span>
+        </nav>
+    </header>
 
+    <header class="wallet-ele">
+        <article>
+            <a href="#">
+                <i class="bi-send"></i>
+                <span>Enviar</span>
+            </a>
+            <a href="#">
+                <i class="bi-download"></i>
+                <span>Receber</span>
+            </a>
+            <a href="#">
+                <i class="bi-send"></i>
+                <span>Transferir</span>
+            </a>
+            <a href="#">
+                <i class="bi-send"></i>
+                <span>Converter</span>
+            </a>
+            <a href="#">
+                <i class="bi-send"></i>
+                <span>Retirar</span>
+            </a>
+        </article>
+    </header>
 
+    <section class="app-content">
 
+        <article class="pub-bainner">
 
+            <div></div>
 
+        </article>
 
+        <h1>Transação</h1>
+        <article class="history-transction"></article>
+    </section>
 
-
-
-
-
-
+    <section class="nav-bar-bottom">
+        <a href="">Carteira</a>
+        <a href="">Mercado</a>
+        <a href="./pages/tarefas.html">Tarefas</a>
+        <a href="">Configucao</a>
+    </section>
     
+
+
+
+
+
+
+
+    <script>
+        window.addEventListener('load', ()=>{ getBalances()})
+        function getBalances (){
+            var myBalanceGnc = parseFloat(localStorage.getItem('myBalanceGnc'))
+            var myBalanceAOA = parseFloat(localStorage.getItem('myBalanceAOA'))
+            
+            const AOA = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'AOA',
+            });
+            const Dolar = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+            });
+            if(localStorage.getItem('gncoin') !== null){
+                var values = myBalanceGnc
+                document.getElementById('gncoin').innerHTML = `${values} GNCoin`
+                document.getElementById('saldo').innerHTML = `${AOA.format(myBalanceAOA)}`
+            }
+        }
+    </script>
+
 </body>
 </html>
